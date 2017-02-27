@@ -4,71 +4,118 @@
 }
 /*指定*/
 body {
-	background-color: #E5E3D4 !important;
+	background-color: #F1F0E1 !important;
 	font-family: "logotypejp", "游ゴシック" !important;
+	color: #373737;
 }
 div.row {
 	margin-left: 0;
 	margin-right: 0;
 }
+div.limit_wsize {
+	max-width: 970px;
+	margin: 0 auto;
+}
 
 /*page*/
 div#content {
-	max-width: 970px;
-	background-color: #E5E3D4;
+	z-index: -2;
+	width: 100%;
 	margin: 0 auto;
 	padding: 0;
-	padding-bottom: 60px;
+	padding-bottom: 20px;
+	background-color: #F1F0E1;
 }
 
 /*navbar*/
+header {
+
+}
+nav.navbar-default {
+	background-color: rgba(248,248,248,1);
+	border: none;
+}
 ul#nav_fline {
 	vertical-align: middle;
+	margin-left: 50px;
+}
+ul#nav_fline li:nth-child(1) {
+	padding-top: 5px;
 }
 ul#nav_fline li:nth-child(2) {
-	font-size: 30px;
+	font-size: 40px;
 	vertical-align: middle;
-	padding: 0 20px;
+	padding: 0 10px;
 	font-weight: bold;
 }
 ul#nav_fline li:nth-child(3) {
-	font-size: 11px;
-	padding-top: 7px;
+	font-size: 14px;
+	padding-top: 9px;
+	padding-left: 20px;
 	font-weight: bold;
+}
+ul#nav_fliner li {
+	padding-top: 10px;
+	padding-left: 10px;
 }
 nav.navbar {
 	margin-bottom: 0;
+	font-size: 18px;
+}
+div#navsm a {
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 5px;
+	padding-bottom: 10px;
+	color: #373737;
+}
+div#navsm {
+	max-width: 970px;
 }
 div.navbar-collapse {
-	max-width: 970px;
+	padding: 0 30px !important;
 	margin: 0 auto;
 }
 
 /*topcover*/
+div#top_content {
+	height: 100vh;
+	width: 100%;
+}
 div#top_image {
 	background-image: url("../images/top_image.png");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-	height: 500px;
-	position: relative;
+	z-index: -1;
+	height: 100vh;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
 }
 div#top_images_text {
-	position: absolute;
-	left: 50px;
-	bottom: 20px;
+	position: relative;
+	top: 85vh;
+	left: 20px;
+	width: 50vw;
+	margin: 0;
 	color: white;
-	font-size: 28px;
+	font-size: 48px;
 	font-weight: bold;
 	text-shadow: 1px 3px 2px rgba(0,0,0,0.5);
 }
 div#top_images_float div#top_images_float_text {
 	position: absolute;
-	right: 50px;
-	top: 220px;
+	right: 90px;
+	top: 300px;
 	color: white;
-	font-size: 25px;
+	font-size: 30px;
 	font-weight: bold;
+}
+div#top_images_float:hover div#top_images_float_text {
+	font-size: 40px;
+	transition: font-size 0.5s;
 }
 div#top_images_float::before {
     display: block;
@@ -76,29 +123,63 @@ div#top_images_float::before {
     position: absolute;
     top: 0;
     right: 0;
-	width: 500px;
+	width: 40vw;
 	height: 0;
 	border-style: solid;
-	border-width: 500px 00px 00px 200px;
-	border-color: rgba(200,0,0,0.5) transparent transparent transparent;
+	border-width: 100vh 00px 00px 200px;
+	border-color: rgba(245,97,81,0.5) transparent transparent transparent;
+	transition: border-color 0.5s, width 0.3s;
+}
+div#top_images_float:hover::before {
+	width: 50vw;
+	border-color: rgba(245,97,81,0.9) transparent transparent transparent;
+	transition: border-color 0.5s, width 0.5s;
+}
+div#top_images_float::after {
+    display: block;
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    top: 60vh;
+    right: 150px;
+	width: 150px;
+	height: 150px;
+    background-color: transparent;
+	transition: border 0.5s, background-color 0.5s;
+}
+div#top_images_float:hover::after {
+	background-image: url("../images/arrow_button.png");
+	background-repeat: no-repeat;
+	background-position: center;
+    background-color: transparent;
+    border: solid 4px white;
+	transition: border 0.3s, background-color 0.5s;
 }
 
 /*news*/
 div#news_content {
-	margin: 10px;
+	margin: 30px 10px;
 }
 div#news_title {
 	font-size: 26px;
 	font-weight: bold;
+	padding-bottom: 10px;
+}
+div#news_title img {
+	border-radius: 50%;
+	margin-right: 12px;
+	margin-top: -4px;
 }
 div#news_table {
 	background-color: white;
 	border: none;
-	height: 100px;
+	height: 180px;
+    z-index: 3;
 }
 div#news_table table {
 	border: none;
 	margin: 0;
+    z-index: 3;
 }
 div#news_table table th {
 	width: 200px;
@@ -133,7 +214,12 @@ div#menu_content div div.menu_panel::before {
 	height: 0;
 	border-style: solid;
 	border-width: 0 0 50px 50px;
-	border-color: transparent transparent #E5E3D4 transparent;
+	border-color: transparent transparent #F1F0E1 transparent;
+}
+div.menu_panel_image::after {
+    display: block;
+    content: '';
+    position: relative;
 }
 div#menu_content div div.menu_panel p {
     position: absolute;
