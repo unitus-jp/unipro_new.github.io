@@ -1,9 +1,118 @@
-/*content*/
+@font-face {
+	font-family: "logotypejp";
+	src: url('../font/logotypejp_mp_m_1.1.ttf') format('OpenType');
+}
+/*指定*/
+body {
+	background-color: #E5E3D4 !important;
+	font-family: "logotypejp", "游ゴシック" !important;
+}
+div.row {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+/*page*/
 div#content {
 	max-width: 970px;
+	background-color: #E5E3D4;
+	margin: 0 auto;
+	padding: 0;
+	padding-bottom: 60px;
 }
+
+/*navbar*/
+ul#nav_fline {
+	vertical-align: middle;
+}
+ul#nav_fline li:nth-child(2) {
+	font-size: 30px;
+	vertical-align: middle;
+	padding: 0 20px;
+	font-weight: bold;
+}
+ul#nav_fline li:nth-child(3) {
+	font-size: 11px;
+	padding-top: 7px;
+	font-weight: bold;
+}
+nav.navbar {
+	margin-bottom: 0;
+}
+div.navbar-collapse {
+	max-width: 970px;
+	margin: 0 auto;
+}
+
 /*topcover*/
+div#top_image {
+	background-image: url("../images/top_image.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 500px;
+	position: relative;
+}
+div#top_images_text {
+	position: absolute;
+	left: 50px;
+	bottom: 20px;
+	color: white;
+	font-size: 28px;
+	font-weight: bold;
+	text-shadow: 1px 3px 2px rgba(0,0,0,0.5);
+}
+div#top_images_float div#top_images_float_text {
+	position: absolute;
+	right: 50px;
+	top: 220px;
+	color: white;
+	font-size: 25px;
+	font-weight: bold;
+}
+div#top_images_float::before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+	width: 500px;
+	height: 0;
+	border-style: solid;
+	border-width: 500px 00px 00px 200px;
+	border-color: rgba(200,0,0,0.5) transparent transparent transparent;
+}
+
+/*news*/
+div#news_content {
+	margin: 10px;
+}
+div#news_title {
+	font-size: 26px;
+	font-weight: bold;
+}
+div#news_table {
+	background-color: white;
+	border: none;
+	height: 100px;
+}
+div#news_table table {
+	border: none;
+	margin: 0;
+}
+div#news_table table th {
+	width: 200px;
+}
+div#news_table table th,
+div#news_table table td {
+	border: none;
+	margin: 0;
+}
+
 /*linkmenu*/
+div#menu_content {
+	margin: 20px 0;
+}
 div#menu_content div div.menu_panel {
 	color: white;
 	padding: 30px;
@@ -23,7 +132,7 @@ div#menu_content div div.menu_panel::before {
 	width: 0;
 	height: 0;
 	border-style: solid;
-	border-width: 0 0 80px 80px;
+	border-width: 0 0 50px 50px;
 	border-color: transparent transparent #E5E3D4 transparent;
 }
 div#menu_content div div.menu_panel p {
@@ -40,4 +149,19 @@ div#menu_detail {
 }
 div#menu_access {
 	background-color: #EAC200;
+}
+div#menu_qa {
+	background-color: #E3477E;
+}
+div#menu_diary {
+	background-color: #F29950;
+}
+
+/*footer*/
+footer {
+	height: 100px;
+	padding: 40px;
+	text-align: center;
+	vertical-align: middle;
+	background-color: white;
 }
