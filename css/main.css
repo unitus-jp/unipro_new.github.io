@@ -1,0 +1,43 @@
+/*content*/
+div#content {
+	max-width: 970px;
+}
+/*topcover*/
+/*linkmenu*/
+div#menu_content div div.menu_panel {
+	color: white;
+	padding: 30px;
+	font-size: 25px;
+}
+div#menu_content div div.menu_panel::after {
+    display: block;
+    content: '';
+    position: relative;
+    padding-top: 100%;
+}
+div#menu_content div div.menu_panel::before {
+    content: "";
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 0 80px 80px;
+	border-color: transparent transparent #E5E3D4 transparent;
+}
+div#menu_content div div.menu_panel p {
+    position: absolute;
+}
+div#menu_unabout {
+	background-color: #F56151;
+}
+div#menu_prabout {
+	background-color: #3D9EC7;
+}
+div#menu_detail {
+	background-color: #90b670;
+}
+div#menu_access {
+	background-color: #EAC200;
+}
