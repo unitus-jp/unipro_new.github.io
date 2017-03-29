@@ -1,0 +1,33 @@
+#wrap {
+	padding: 0;
+}
+#inner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+#single_box {
+	margin-top: 60px;
+}
+#single_box h2 {
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+.post_content {
+	border-left: solid 2px rgba(255, 255, 255, 0.3);
+}
+
+@media screen and (max-width: 767px) {
+	.post_content {
+		border-left: none !important;
+	}
+	#single_date>div.col-xs-2 {
+		width: auto;
+	}
+	#single_date>div.col-xs-2 p {
+	    font-size: 20px !important;
+	}
+	#single_date>div.col-xs-12 p {
+		margin: 5px 0 !important;
+	}
+}
